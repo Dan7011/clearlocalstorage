@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Clear Local Storage Using JavaScript</h2>
+    <h3>Create Items</h3>
+    <p>Create the local storage items.</p>
+    <button onclick="create()">Create local storage items</button>
+    <p id="demo"></p>
+    <p id="sample"></p>
+    <p id="para"></p>
+    <p id="para2"></p>
+    <h3>Remove Items</h3>
+    <p>Remove all local storage items.</p>
+    <button onclick="remove()">Clear items</button>
+</body>
+<script>
+    function create() {
+        localStorage.setItem("firstname", "Anna");
+        document.getElementById("demo").innerHTML = localStorage.getItem("firstname");
+        localStorage.setItem("lastname", "johnson");
+        document.getElementById("sample").innerHTML = localStorage.getItem("lastname");
+        localStorage.setItem("age", "22");
+        document.getElementById("para").innerHTML = localStorage.getItem("age");
+        localStorage.setItem("gender", "female");
+        document.getElementById("para2").innerHTML = localStorage.getItem("gender");
+    }
+    function remove() {
+        localStorage.clear();
+        alert("Local Storage items have been cleared");
+    }
+</script>
+
+</html>
